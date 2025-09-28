@@ -1,12 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import ParticlesBackground from "@/components/ParticlesBackground";
+import Navigation from "@/components/Navigation";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import SkillsSection from "@/components/SkillsSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import ContactSection from "@/components/ContactSection";
+import SocialLinks from "@/components/SocialLinks";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background text-foreground">
+      <ParticlesBackground />
+      <Navigation />
+      
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ContactSection />
+      </main>
+      
+      <footer className="py-8 px-6 border-t border-border/20">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+          <div className="text-muted-foreground mb-4 md:mb-0">
+            © 2024 Portfolio. Built with passion and modern technology.
+          </div>
+          <SocialLinks />
+        </div>
+      </footer>
     </div>
   );
 };
