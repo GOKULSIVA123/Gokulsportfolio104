@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import profileImage from '@/assets/profile-image.jpg';
+import { useNavigate as nav1 } from "react-router-dom";
 
 const HeroSection = () => {
   const containerVariants = {
@@ -53,30 +54,31 @@ const HeroSection = () => {
 
         <motion.h1
           variants={itemVariants}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+          className="text-4xl md:text-6xl lg:text-6xl font-bold mb-6 leading-tight"
         >
           <span className="gradient-text">Creative Developer</span>
           <br />
-          <span className="text-foreground">& Digital Innovator</span>
+          <span className="text-foreground">Adaptive Problem Solver</span>
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
           className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
         >
-          Crafting exceptional digital experiences with modern technologies and creative solutions that make a difference.
+          Dedicated to building web applications that solve real-life problems and enhance everyday experiences.
         </motion.p>
 
         <motion.div
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-        >
-          <Button
-            size="lg"
-            className="hero-gradient text-white hover:shadow-2xl hover:scale-105 transition-all duration-300"
+        > 
+        <a
+          href="#projects"
+          className="hero-gradient text-white hover:shadow-2xl hover:scale-105 transition-all duration-300 px-6 py-3 rounded-lg inline-block"
           >
-            View My Work
-          </Button>
+         View My Work
+        </a>
+
           <Button
             variant="outline"  
             size="lg"

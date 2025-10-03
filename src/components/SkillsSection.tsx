@@ -26,11 +26,11 @@ const SkillsSection = () => {
     {
       category: 'Frontend',
       technologies: [
-        { name: 'React', level: 95 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'Next.js', level: 85 },
-        { name: 'Tailwind CSS', level: 92 },
-        { name: 'Framer Motion', level: 88 }
+        { name: 'React', level: 80 },
+        { name: 'JavaScript', level: 75 },
+        { name: 'Tailwind CSS', level: 90 },
+        { name: 'Framer Motion', level: 80 },
+        {name:'CSS',level:90}
       ],
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -41,11 +41,11 @@ const SkillsSection = () => {
     {
       category: 'Backend',
       technologies: [
-        { name: 'Node.js', level: 88 },
-        { name: 'Express', level: 85 },
-        { name: 'Python', level: 82 },
-        { name: 'PostgreSQL', level: 86 },
-        { name: 'MongoDB', level: 80 }
+        { name: 'Flask', level: 80 },
+        { name: 'FastApi', level: 70 },
+        { name: 'Python', level: 85 },
+        { name: 'SQLite', level: 75 },
+        { name: 'MongoDB', level: 65 },
       ],
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,11 +56,13 @@ const SkillsSection = () => {
     {
       category: 'Tools & Cloud',
       technologies: [
-        { name: 'AWS', level: 85 },
+        {name:'n8n',level:80},
+        { name: 'Postman', level: 75 },
         { name: 'Docker', level: 80 },
-        { name: 'Git', level: 95 },
-        { name: 'Figma', level: 88 },
-        { name: 'CI/CD', level: 82 }
+        { name: 'GitHub', level: 90 },
+        { name: 'Render', level: 80 },
+        {name:'Firebase',level:80},
+        {name:'clerk',level:75}
       ],
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
