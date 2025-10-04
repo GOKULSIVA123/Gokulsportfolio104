@@ -32,7 +32,7 @@ const HeroSection = () => {
         animate="visible"
         className="max-w-4xl mx-auto text-center"
       >
-        <motion.div
+        {/* <motion.div
           variants={itemVariants}
           className="mb-8"
         >
@@ -49,8 +49,8 @@ const HeroSection = () => {
               animate={{ rotate: 360 }}
               transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
             />
-          </div>
-        </motion.div>
+          </div> */}
+        {/* </motion.div> */}
 
         <motion.h1
           variants={itemVariants}

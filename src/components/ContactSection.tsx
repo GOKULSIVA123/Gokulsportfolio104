@@ -67,8 +67,8 @@ const ContactSection = () => {
         </svg>
       ),
       title: 'Email',
-      value: 'hello@portfolio.dev',
-      href: 'mailto:hello@portfolio.dev'
+      value: 'gokulsiva1101@gmail.com',
+      href: 'mailto:gokulsiva1101@gmail.com'
     },
     {
       icon: (
@@ -77,8 +77,8 @@ const ContactSection = () => {
         </svg>
       ),
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+91 9790885720',
+      href: 'tel:+919790885720'
     },
     {
       icon: (
@@ -88,7 +88,7 @@ const ContactSection = () => {
         </svg>
       ),
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Guduvanchery, Tamilnadu',
       href: '#'
     }
   ];
@@ -142,7 +142,7 @@ const ContactSection = () => {
                 <div className="mt-8 pt-8 border-t border-border/20">
                   <h4 className="font-semibold mb-4 text-foreground">Available for:</h4>
                   <div className="flex flex-wrap gap-2">
-                    {['Full-stack Development', 'Frontend Development', 'UI/UX Design', 'Consulting'].map((service) => (
+                    {['Full-stack Development', 'Frontend Development', 'Python Full-stack Development', 'Backend Development'].map((service) => (
                       <span
                         key={service}
                         className="px-3 py-1 text-sm bg-primary/10 text-primary rounded-full border border-primary/20"

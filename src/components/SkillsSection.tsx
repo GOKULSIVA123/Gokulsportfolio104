@@ -135,7 +135,7 @@ const SkillsSection = () => {
               <p className="text-muted-foreground leading-relaxed">
                 The tech industry evolves rapidly, and I'm committed to continuous learning. I regularly explore new technologies, 
                 attend workshops, and contribute to open-source projects to stay at the forefront of modern development practices. 
-                Currently exploring AI/ML integration, Web3 technologies, and advanced cloud architectures.
+                Currently exploring AI and Automation Tools integration,devops, and cloud architectures.
               </p>
             </div>
           </motion.div>
