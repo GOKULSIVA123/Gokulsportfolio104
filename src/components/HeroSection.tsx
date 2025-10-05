@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import profileImage from '@/assets/profile-image.jpg';
-import { useNavigate as nav1 } from "react-router-dom";
-
 const HeroSection = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
