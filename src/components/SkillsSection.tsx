@@ -45,6 +45,7 @@ const SkillsSection = () => {
         { name: 'FastApi', level: 70 },
         { name: 'Python', level: 85 },
         { name: 'SQLite', level: 75 },
+        {name:'frappe framework',level:70},
         { name: 'MongoDB', level: 65 },
       ],
       icon: (
