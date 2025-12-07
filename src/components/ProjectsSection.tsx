@@ -81,13 +81,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <motion.div variants={itemVariants} className="text-center mb-16">
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="gradient-text">Featured Projects</span>
             </h2>
@@ -95,7 +89,7 @@ const ProjectsSection = () => {
               A showcase of my recent work, featuring innovative solutions and
               cutting-edge technologies.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
@@ -218,7 +212,6 @@ const ProjectsSection = () => {
               </svg>
             </Button>
           </motion.div>
-        </motion.div>
       </div>
     </section>
   );

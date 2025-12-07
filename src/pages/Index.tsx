@@ -24,7 +24,7 @@ const Index = () => {
       <footer className="py-8 px-6 border-t border-border/20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
           <div className="text-muted-foreground mb-4 md:mb-0">
-            © 2024 Portfolio. Built with passion and modern technology.
+            ©2025 GOKULSIVA Portfolio. Built with passion and modern technology.
           </div>
           <SocialLinks />
         </div>

@@ -5,6 +5,9 @@
 /* Professional Portfolio Design System - Dark Theme with Modern Gradients
 All colors MUST be HSL.
 */
+html {
+  font-size: 18px;
+}
 
 @layer base {
   :root {
