@@ -87,10 +87,10 @@ const HeroSection = () => {
               size="lg"
               className="border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary transition-all duration-300"
               onClick={() =>
-                window.open("/Gokul-fullstack-resume1.pdf", "_blank")
+                window.open("(https://github.com/user-attachments/files/24110908/Gokul-fullstack-resume1.pdf", "_blank")
               }
             >
-              Download CV
+              Download Resume
             </Button>
           </motion.div>
           <SocialLinks></SocialLinks>
