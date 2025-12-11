@@ -92,7 +92,7 @@ const SkillsSection = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skills.map((skillCategory, index) => (
               <motion.div key={skillCategory.category} variants={itemVariants}>
                 <Card className="card-gradient p-8 border-border/20 hover-glow transition-smooth h-full">
