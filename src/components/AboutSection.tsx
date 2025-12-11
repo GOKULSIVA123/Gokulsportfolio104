@@ -26,7 +26,7 @@ const AboutSection = () => {
     { number: "15+", label: "Projects Done" },
     { number: "2", label: "Internships Completed" },
     { number: "2", label: "Coding Languages Mastered" },
-    { number: "0", label: "Open Source Contribution" },
+    { number: "1", label: "Open Source Contribution" },
   ];
 
   return (
