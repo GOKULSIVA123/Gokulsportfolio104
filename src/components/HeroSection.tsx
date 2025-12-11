@@ -87,7 +87,7 @@ const HeroSection = () => {
               size="lg"
               className="border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary transition-all duration-300"
               onClick={() =>
-                window.open("https://drive.google.com/file/d/1yqlAgRIBdV6OUccV6jk1AUkyy_213nGC/view?usp=sharing", "_blank")
+                window.open("https://drive.google.com/file/d/1LG3b2fUGbBhvYhGOkviYO_IT748Muwky/view?usp=sharing", "_blank")
               }
             >
               Download Resume
