@@ -86,6 +86,9 @@ const HeroSection = () => {
               variant="outline"
               size="lg"
               className="border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary transition-all duration-300"
+              onClick={() =>
+                window.open("/Gokul-fullstack-resume1.pdf", "_blank")
+              }
             >
               Download CV
             </Button>
