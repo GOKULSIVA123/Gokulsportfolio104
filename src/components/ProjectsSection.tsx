@@ -41,7 +41,7 @@ const ProjectsSection = () => {
         "Framer Motion",
         "Clerk",
       ],
-      image: taskflow,
+      image: InternTrack,
       liveUrl: "https://interntrack001-3.onrender.com/",
       githubUrl: "https://github.com/GOKULSIVA123/InternTrack001",
       featured: true,
