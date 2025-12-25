@@ -25,7 +25,7 @@ const ProjectsSection = () => {
       transition: { duration: 0.8 },
     },
   };
-
+  // 1)NPM RUN DEPLOY-> TO UPDATE IN GHPAGES ELSE 2)NPM RUN BUILD
   const projects = [
     {
       title: "Internship Application Tracker",
@@ -41,7 +41,7 @@ const ProjectsSection = () => {
         "Clerk",
       ],
       image: taskflow,
-      liveUrl: "https://internship-tracker.onrender.com",
+      liveUrl: "https://interntrack001-3.onrender.com/",
       githubUrl: "https://github.com/GOKULSIVA123/InternTrack001",
       featured: true,
     },
