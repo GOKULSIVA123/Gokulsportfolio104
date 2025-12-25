@@ -5,6 +5,7 @@ import gadgetImage from "@/assets/Electro E-commerce.png";
 import taskflow from "@/assets/Taskflow.png";
 import rps from "@/assets/RPS.png";
 import nextgen from "@/assets/nextgen.png";
+import InternTrack from "@/assets/InternTrack.png";
 const ProjectsSection = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
