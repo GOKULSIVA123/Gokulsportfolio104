@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import gadgetImage from "@/assets/Electro E-commerce.png";
-import taskflow from "@/assets/Taskflow.png"
-import rps from "@/assets/RPS.png"
-import nextgen from "@/assets/nextgen.png"
+import taskflow from "@/assets/Taskflow.png";
+import rps from "@/assets/RPS.png";
+import nextgen from "@/assets/nextgen.png";
 const ProjectsSection = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -28,10 +28,34 @@ const ProjectsSection = () => {
 
   const projects = [
     {
+      title: "Internship Application Tracker",
+      description:
+        "A comprehensive full-stack application designed to organize your job search. Built with a React frontend and a Motia-powered Node.js backend, it features real-time status tracking, automated email notifications via Nodemailer, and secure authentication with Clerk. The event-driven architecture ensures a seamless and responsive user experience.",
+      technologies: [
+        "React",
+        "Motia",
+        "Node.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Clerk",
+      ],
+      image: taskflow,
+      liveUrl: "https://internship-tracker.onrender.com",
+      githubUrl: "https://github.com/GOKULSIVA123/InternTrack001",
+      featured: true,
+    },
+    {
       title: "GadgetNest E-Commerce Platform",
       description:
         "Developed a fully responsive e-commerce website for premium gadgets using React.js and Tailwind CSS. Implemented dynamic product listings, secure shopping cart, and promotional modules. Enhanced user experience with react-slick carousels and AOS scroll animations. Followed best practices for scalability, performance, and modern front-end architecture.",
-      technologies: ["React", "Tailwind css", "JavaScript", "CSS","React-Router"],
+      technologies: [
+        "React",
+        "Tailwind css",
+        "JavaScript",
+        "CSS",
+        "React-Router",
+      ],
       image: gadgetImage,
       liveUrl: " https://gokulsiva123.github.io/My-Electro-Ecommerce/",
       githubUrl: "https://github.com/GOKULSIVA123/My-Electro-Ecommerce",
@@ -60,9 +84,17 @@ const ProjectsSection = () => {
       title: "NextGen Safe Education Platform",
       description:
         "Developed a disaster awareness education platform with React and Tailwind CSS, designed for engaging and interactive learning for kids. Integrated Framer Motion for smooth animations and Chart.js for visual progress tracking. Implemented Twilio for WhatsApp integration to provide timely safety alerts and communication. The platform features a clean, intuitive UI focused on safety education and easy navigation.",
-      technologies: ["React", "Python", "Flask", "Chart.js","Twilio","Tailwindcss"],
+      technologies: [
+        "React",
+        "Python",
+        "Flask",
+        "Chart.js",
+        "Twilio",
+        "Tailwindcss",
+      ],
       image: nextgen,
-      githubUrl: "https://github.com/GOKULSIVA123/Disaster-Management-Application-01",
+      githubUrl:
+        "https://github.com/GOKULSIVA123/Disaster-Management-Application-01",
       liveUrl: "https://nextgensafe04.netlify.app/",
       featured: true,
     },
@@ -81,93 +113,98 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="gradient-text">Featured Projects</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              A showcase of my recent work, featuring innovative solutions and
-              cutting-edge technologies.
-            </p>
-          </div>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="gradient-text">Featured Projects</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            A showcase of my recent work, featuring innovative solutions and
+            cutting-edge technologies.
+          </p>
+        </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                variants={itemVariants}
-                whileHover={{
-                  y: -10,
-                  rotateX: 5,
-                  rotateY: 5,
-                  scale: 1.02,
-                }}
-                className="group perspective-1000"
-              >
-                <Card className="card-gradient border-border/20 overflow-hidden h-full hover-glow transition-all duration-500 transform-gpu">
-                  <div className="relative overflow-hidden">
-                    <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-blue-500/20 flex items-center justify-center">
-                      <div key={index} className="text-6xl opacity-20">
-                        <img src={project.image} className=""></img>
-                      </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.title}
+              variants={itemVariants}
+              whileHover={{
+                y: -10,
+                rotateX: 5,
+                rotateY: 5,
+                scale: 1.02,
+              }}
+              className="group perspective-1000"
+            >
+              <Card className="card-gradient border-border/20 overflow-hidden h-full hover-glow transition-all duration-500 transform-gpu">
+                <div className="relative overflow-hidden">
+                  <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-blue-500/20 flex items-center justify-center">
+                    <div key={index} className="text-6xl opacity-20">
+                      <img src={project.image} className=""></img>
                     </div>
-                    {project.featured && (
-                      <div className="absolute top-4 right-4">
-                        <span className="px-3 py-1 text-xs font-semibold hero-gradient text-white rounded-full">
-                          Featured
-                        </span>
-                      </div>
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  {project.featured && (
+                    <div className="absolute top-4 right-4">
+                      <span className="px-3 py-1 text-xs font-semibold hero-gradient text-white rounded-full">
+                        Featured
+                      </span>
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3 text-foreground group-hover:gradient-text transition-all duration-300">
+                    {project.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-1 text-xs bg-secondary/50 text-foreground rounded-md border border-border/20"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
 
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-3 text-foreground group-hover:gradient-text transition-all duration-300">
-                      {project.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                      {project.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {project.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-1 text-xs bg-secondary/50 text-foreground rounded-md border border-border/20"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="flex flex-row gap-3 justify-between items-center">
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1"
+                  <div className="flex flex-row gap-3 justify-between items-center">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1"
+                    >
+                      <Button
+                        size="sm"
+                        className="hero-gradient text-white hover:shadow-lg transition-all duration-300 flex-1"
                       >
-                        <Button
-                          size="sm"
-                          className="hero-gradient text-white hover:shadow-lg transition-all duration-300 flex-1"
+                        <svg
+                          className="w-4 h-4 mr-2"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
                         >
-                          <svg
-                            className="w-4 h-4 mr-2"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                            />
-                          </svg>
-                          Live Demo
-                        </Button>
-                      </a>
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                        Live Demo
+                      </Button>
+                    </a>
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1"
+                    >
                       <Button
                         variant="outline"
                         size="sm"
@@ -182,36 +219,36 @@ const ProjectsSection = () => {
                         </svg>
                         Github Repo
                       </Button>
-                      </a>
-                    </div>
+                    </a>
                   </div>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+                </div>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
 
-          <motion.div variants={itemVariants} className="text-center mt-16">
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary transition-all duration-300"
+        <motion.div variants={itemVariants} className="text-center mt-16">
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary transition-all duration-300"
+          >
+            View All Projects
+            <svg
+              className="w-4 h-4 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              View All Projects
-              <svg
-                className="w-4 h-4 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </Button>
-          </motion.div>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </Button>
+        </motion.div>
       </div>
     </section>
   );
