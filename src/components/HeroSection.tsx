@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import profileImage from "@/assets/Gokul_courtsuit1.png";
+// import profileImage from "@/assets/Gokul Photo.jpg";
 import SocialLinks from "./SocialLinks";
 // 1)NPM RUN DEPLOY-> TO UPDATE IN GHPAGES ELSE 2)NPM RUN BUILD
 
@@ -36,7 +36,7 @@ const HeroSection = () => {
         animate="visible"
         className="max-w-4xl mx-auto text-center flex flex-col justify-center items-center mt-40"
       >
-        <motion.div variants={itemVariants} className="mb-8">
+        {/* <motion.div variants={itemVariants} className="mb-8">
           <div className="relative inline-block">
             <motion.img
               src={profileImage}
@@ -51,7 +51,7 @@ const HeroSection = () => {
               transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
             />
           </div>
-        </motion.div>
+        </motion.div> */}
 
         <motion.h1
           variants={itemVariants}
