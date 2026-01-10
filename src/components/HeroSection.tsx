@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import profileImage from "@/assets/Gokul_courtsuit1.png";
 import SocialLinks from "./SocialLinks";
+// 1)NPM RUN DEPLOY-> TO UPDATE IN GHPAGES ELSE 2)NPM RUN BUILD
+
 const HeroSection = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -42,7 +44,7 @@ const HeroSection = () => {
             <motion.img
               src={profileImage}
               alt="Profile"
-              className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 object-cover border-4 border-primary/20"
+              className="w-32 h-32 md:w-52 md:h-52 rounded-full mx-auto mb-6 object-cover border-4 border-primary/20"
               whileHover={{ scale: 1.05, rotate: 5 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             />
