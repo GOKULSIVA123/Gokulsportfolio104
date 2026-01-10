@@ -36,15 +36,12 @@ const HeroSection = () => {
         animate="visible"
         className="max-w-4xl mx-auto text-center flex flex-col justify-center items-center mt-40"
       >
-        <motion.div
-          variants={itemVariants}
-          className="mb-8"
-        >
+        <motion.div variants={itemVariants} className="mb-8">
           <div className="relative inline-block">
             <motion.img
               src={profileImage}
               alt="Profile"
-              className="w-32 h-32 md:w-52 md:h-52 rounded-full mx-auto mb-6 object-cover border-4 border-primary/20"
+              className="w-40 h-40 md:w-60 md:h-60 rounded-full mx-auto mb-6 object-cover border-4 border-primary/20"
               whileHover={{ scale: 1.05, rotate: 5 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             />
@@ -89,7 +86,10 @@ const HeroSection = () => {
               size="lg"
               className="border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary transition-all duration-300"
               onClick={() =>
-                window.open("https://drive.google.com/file/d/1Y6foXvBHYb1W84vHeC1FS_Z4wi_D46Yh/view?usp=sharing", "_blank")
+                window.open(
+                  "https://drive.google.com/file/d/1Y6foXvBHYb1W84vHeC1FS_Z4wi_D46Yh/view?usp=sharing",
+                  "_blank"
+                )
               }
             >
               Download Resume
