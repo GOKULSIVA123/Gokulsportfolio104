@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-// import profileImage from "@/assets/Gokul Photo.jpg";
+import profileImage from "@/assets/Gokul_courtsuit1.png";
 import SocialLinks from "./SocialLinks";
 const HeroSection = () => {
   const containerVariants = {
@@ -34,7 +34,7 @@ const HeroSection = () => {
         animate="visible"
         className="max-w-4xl mx-auto text-center flex flex-col justify-center items-center mt-40"
       >
-        {/* <motion.div
+        <motion.div
           variants={itemVariants}
           className="mb-8"
         >
@@ -47,12 +47,12 @@ const HeroSection = () => {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             />
             <motion.div
-              className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary to-blue-500 opacity-30 blur-lg"
+              className="absolute -inset-1 rounded-full "
               animate={{ rotate: 360 }}
               transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
             />
           </div>
-        </motion.div> */}
+        </motion.div>
 
         <motion.h1
           variants={itemVariants}
