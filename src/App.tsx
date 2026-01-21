@@ -14,7 +14,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       {/* Add basename for GitHub Pages subpath */}
-      <BrowserRouter basename="/Gokulsportfolio104">
+      <BrowserRouter basename="/">
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
