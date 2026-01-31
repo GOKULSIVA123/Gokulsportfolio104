@@ -6,6 +6,7 @@ import taskflow from "@/assets/Taskflow.png";
 import rps from "@/assets/RPS.png";
 import nextgen from "@/assets/nextgen.png";
 import InternTrack from "@/assets/InternTrack.png";
+import Translatepro from "@/assets/Translatepro.png";
 const ProjectsSection = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -28,6 +29,24 @@ const ProjectsSection = () => {
   };
   // 1)NPM RUN DEPLOY-> TO UPDATE IN GHPAGES ELSE 2)NPM RUN BUILD
   const projects = [
+        {
+      title: "TranslatePro",
+      description:
+        "A high-fidelity document translation system developed by a team of four as an internship project for a client. Designed to convert complex technical PDFs into other languages while strictly preserving original layouts, diagrams, and formatting. Built with a React frontend and a Python FastAPI backend, it leverages Azure AI Translator for enterprise-grade accuracy. It features real-time processing, secure document handling, and a responsive interface powered by Vite and Framer Motion.",
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Python",
+        "FastAPI",
+        "Azure AI Translator",
+        "SQLite",
+      ],
+      image: Translatepro,
+      liveUrl: "https://translatepro01-3.onrender.com/",
+      githubUrl: "https://github.com/GOKULSIVA123/TranslatePro01.git",
+      featured: true,
+    },
     {
       title: "Internship Application Tracker",
       description:
