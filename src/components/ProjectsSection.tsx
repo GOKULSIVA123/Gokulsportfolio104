@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import gadgetImage from "@/assets/Electro E-commerce.png";
@@ -7,29 +6,11 @@ import rps from "@/assets/RPS.png";
 import nextgen from "@/assets/nextgen.png";
 import InternTrack from "@/assets/InternTrack.png";
 import Translatepro from "@/assets/Translatepro.png";
-const ProjectsSection = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
-      },
-    },
-  };
 
-  const itemVariants = {
-    hidden: { y: 60, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.8 },
-    },
-  };
+const ProjectsSection = () => {
   // 1)NPM RUN DEPLOY-> TO UPDATE IN GHPAGES ELSE 2)NPM RUN BUILD
   const projects = [
-        {
+    {
       title: "TranslatePro",
       description:
         "A high-fidelity document translation system developed by a team of four as an internship project for a client. Designed to convert complex technical PDFs into other languages while strictly preserving original layouts, diagrams, and formatting. Built with a React frontend and a Python FastAPI backend, it leverages Azure AI Translator for enterprise-grade accuracy. It features real-time processing, secure document handling, and a responsive interface powered by Vite and Framer Motion.",
@@ -145,18 +126,11 @@ const ProjectsSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <motion.div
+            <div
               key={project.title}
-              variants={itemVariants}
-              whileHover={{
-                y: -10,
-                rotateX: 5,
-                rotateY: 5,
-                scale: 1.02,
-              }}
-              className="group perspective-1000"
+              className="group transition-all duration-300 hover:-translate-y-2"
             >
-              <Card className="card-gradient border-border/20 overflow-hidden h-full hover-glow transition-all duration-500 transform-gpu">
+              <Card className="card-gradient border-border/20 overflow-hidden h-full hover-glow transition-all duration-500">
                 <div className="relative overflow-hidden">
                   <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-blue-500/20 flex items-center justify-center">
                     <div key={index} className="text-6xl opacity-20">
@@ -243,11 +217,11 @@ const ProjectsSection = () => {
                   </div>
                 </div>
               </Card>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div variants={itemVariants} className="text-center mt-16">
+        <div className="text-center mt-16">
           <Button
             size="lg"
             variant="outline"
@@ -268,7 +242,7 @@ const ProjectsSection = () => {
               />
             </svg>
           </Button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

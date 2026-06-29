@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -15,26 +14,6 @@ const ContactSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 60, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.8 }
-    }
-  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
@@ -96,23 +75,18 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 px-2 md:px-6">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <motion.div variants={itemVariants} className="text-center mb-16">
+        <div>
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="gradient-text">Get In Touch</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Ready to start your next project? Let's discuss how we can bring your ideas to life.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
-            <motion.div variants={itemVariants}>
+            <div>
               <Card className="card-gradient p-8 border-border/20 h-full">
                 <h3 className="text-2xl font-bold mb-6 gradient-text">Let's Work Together</h3>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
@@ -121,12 +95,11 @@ const ContactSection = () => {
                 </p>
                 
                 <div className="space-y-6">
-                  {contactInfo.map((info, index) => (
-                    <motion.a
+                  {contactInfo.map((info) => (
+                    <a
                       key={info.title}
                       href={info.href}
-                      whileHover={{ scale: 1.02, x: 10 }}
-                      className="flex items-center space-x-4 p-4 rounded-lg border border-border/20 hover:bg-secondary/20 transition-all duration-300 group"
+                      className="flex items-center space-x-4 p-4 rounded-lg border border-border/20 hover:bg-secondary/20 transition-all duration-300 group hover:translate-x-2"
                     >
                       <div className="w-12 h-12 rounded-lg hero-gradient flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
                         {info.icon}
@@ -135,7 +108,7 @@ const ContactSection = () => {
                         <h4 className="font-semibold text-foreground">{info.title}</h4>
                         <p className="text-muted-foreground">{info.value}</p>
                       </div>
-                    </motion.a>
+                    </a>
                   ))}
                 </div>
 
@@ -153,9 +126,9 @@ const ContactSection = () => {
                   </div>
                 </div>
               </Card>
-            </motion.div>
+            </div>
 
-            <motion.div variants={itemVariants}>
+            <div>
               <Card className="card-gradient p-8 border-border/20">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -248,9 +221,9 @@ const ContactSection = () => {
                   </Button>
                 </form>
               </Card>
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

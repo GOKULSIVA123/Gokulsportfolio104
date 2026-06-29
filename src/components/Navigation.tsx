@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const Navigation = () => {
@@ -22,9 +21,7 @@ const Navigation = () => {
   ];
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
+    <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "glass-card backdrop-blur-md"
@@ -34,41 +31,28 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Brand name always visible */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold gradient-text"
-          >
+          <div className="text-2xl font-bold gradient-text hover:scale-105 transition-transform duration-300 cursor-pointer">
             GOKUL SIVA
-          </motion.div>
+          </div>
 
           {/* Desktop navigation links */}
           <div className="hidden md:flex space-x-8">
-            {navItems.map((item, index) => (
-              <motion.a
+            {navItems.map((item) => (
+              <a
                 key={item.name}
                 href={item.href}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: index * 0.1,
-                  duration: 0.4,
-                  ease: "easeInOut",
-                }}
-                whileHover={{ scale: 1.1 }}
-                className="text-muted-foreground hover:text-foreground transition-smooth relative group"
+                className="text-muted-foreground hover:text-foreground transition-smooth relative group hover:scale-110"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-              </motion.a>
+              </a>
             ))}
           </div>
 
           {/* Hamburger menu for mobile */}
-          <motion.button
+          <button
             onClick={() => setMenuOpen(!menuOpen)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="md:hidden p-2 text-foreground hover:text-primary transition-smooth"
+            className="md:hidden p-2 text-foreground hover:text-primary transition-smooth hover:scale-105 active:scale-95"
             aria-label="Open menu"
           >
             <svg
@@ -84,32 +68,27 @@ const Navigation = () => {
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
-          </motion.button>
+          </button>
         </div>
 
         {/* Mobile dropdown menu */}
         {menuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="flex flex-col items-center justify-center md:hidden mt-4 bg-primary rounded-lg shadow-lg overflow-hidden"
-          >
+          <div className="flex flex-col items-center justify-center md:hidden mt-4 bg-primary rounded-lg shadow-lg overflow-hidden transition-all duration-300">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="px-6 py-3 border-b border-gray-200 text-white hover:bg-blue-50 inline-block relative group"
+                className="px-6 py-3 border-b border-gray-200 text-white hover:bg-blue-50 inline-block relative group w-full text-center"
                 onClick={() => setMenuOpen(false)}
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
-          </motion.div>
+          </div>
         )}
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 

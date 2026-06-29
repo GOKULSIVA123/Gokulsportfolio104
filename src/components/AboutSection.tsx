@@ -1,27 +1,6 @@
-import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 
 const AboutSection = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 60, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.8 },
-    },
-  };
-
   const stats = [
     { number: "15+", label: "Projects Done" },
     { number: "2", label: "Internships Completed" },
@@ -32,23 +11,18 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <motion.div variants={itemVariants} className="text-center mb-16">
+        <div>
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="gradient-text">About Me</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               I'm a passionate full-stack developer dedicated to creating innovative digital solutions that solve real-world problems and enhance daily life. My main focus is on integrating AI and automation into web applications to make technology smarter, more efficient, and accessible.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <motion.div variants={itemVariants}>
+            <div>
               <h3 className="text-2xl font-bold mb-6 text-foreground">
                 My Journey
               </h3>
@@ -74,17 +48,13 @@ const AboutSection = () => {
                 embracing teamwork and knowledge sharing to craft better digital
                 experiences and learn from the community around me.
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              variants={itemVariants}
-              className="grid grid-cols-2 gap-6"
-            >
+            <div className="grid grid-cols-2 gap-6">
               {stats.map((stat, index) => (
-                <motion.div
+                <div
                   key={stat.label}
-                  whileHover={{ scale: 1.05 }}
-                  className="glass-card p-6 text-center hover-glow transition-smooth"
+                  className="glass-card p-6 text-center hover-glow transition-smooth hover:scale-105"
                 >
                   <div className="text-3xl font-bold gradient-text mb-2">
                     {stat.number}
@@ -92,17 +62,14 @@ const AboutSection = () => {
                   <div className="text-sm text-muted-foreground">
                     {stat.label}
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
 
-          <motion.div
-            variants={itemVariants}
-            className="grid md:grid-cols-3 gap-8"
-          >
-          </motion.div>
-        </motion.div>
+          <div className="grid md:grid-cols-3 gap-8">
+          </div>
+        </div>
       </div>
     </section>
   );

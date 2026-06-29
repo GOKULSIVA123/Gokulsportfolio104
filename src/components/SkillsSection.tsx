@@ -1,27 +1,6 @@
-import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 
 const SkillsSection = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 60, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.8 }
-    }
-  };
-
   const skills = [
     {
       category: 'Frontend',
@@ -77,24 +56,19 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <motion.div variants={itemVariants} className="text-center mb-16">
+        <div>
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="gradient-text">My Skills</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               A comprehensive toolkit of modern technologies and frameworks that I use to bring ideas to life.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skills.map((skillCategory, index) => (
-              <motion.div key={skillCategory.category} variants={itemVariants}>
+              <div key={skillCategory.category}>
                 <Card className="card-gradient p-8 border-border/20 hover-glow transition-smooth h-full">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 rounded-lg hero-gradient flex items-center justify-center text-white mr-4">
@@ -104,33 +78,27 @@ const SkillsSection = () => {
                   </div>
                   
                   <div className="space-y-6">
-                    {skillCategory.technologies.map((tech, techIndex) => (
+                    {skillCategory.technologies.map((tech) => (
                       <div key={tech.name} className="space-y-2">
                         <div className="flex justify-between items-center">
                           <span className="text-foreground font-medium">{tech.name}</span>
                           <span className="text-sm text-muted-foreground">{tech.level}%</span>
                         </div>
                         <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                          <motion.div
+                          <div
                             className="h-full hero-gradient rounded-full"
-                            initial={{ width: 0 }}
-                            whileInView={{ width: `${tech.level}%` }}
-                            transition={{ 
-                              duration: 1.5, 
-                              delay: (index * 0.2) + (techIndex * 0.1)
-                            }}
-                            viewport={{ once: true }}
+                            style={{ width: `${tech.level}%` }}
                           />
                         </div>
                       </div>
                     ))}
                   </div>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div variants={itemVariants} className="mt-16 text-center">
+          <div className="mt-16 text-center">
             <div className="glass-card p-8 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold mb-4 gradient-text">Always Learning</h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -139,8 +107,8 @@ const SkillsSection = () => {
                 Currently exploring AI and Automation Tools integration,devops, and cloud architectures.
               </p>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );

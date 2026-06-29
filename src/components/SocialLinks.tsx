@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
 import { SiLeetcode } from "react-icons/si";
+
 const SocialLinks = ({ className = "" }: { className?: string }) => {
   const socialLinks = [
     {
@@ -41,26 +41,17 @@ const SocialLinks = ({ className = "" }: { className?: string }) => {
 
   return (
     <div className={`flex space-x-4 ${className}`}>
-      {socialLinks.map((social, index) => (
-        <motion.a
+      {socialLinks.map((social) => (
+        <a
           key={social.name}
           href={social.url}
           target="_blank"
           rel="noopener noreferrer"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.1 }}
-          whileHover={{ 
-            scale: 1.2, 
-            rotate: 5,
-            backgroundColor: "hsl(var(--primary))"
-          }}
-          whileTap={{ scale: 0.9 }}
-          className="w-10 h-10 rounded-full bg-secondary/50 border border-border/30 flex items-center justify-center text-muted-foreground hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-primary/25"
+          className="w-10 h-10 rounded-full bg-secondary/50 border border-border/30 flex items-center justify-center text-muted-foreground hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 hover:scale-110 active:scale-95 hover:bg-primary"
           aria-label={social.name}
         >
           {social.icon}
-        </motion.a>
+        </a>
       ))}
     </div>
   );
