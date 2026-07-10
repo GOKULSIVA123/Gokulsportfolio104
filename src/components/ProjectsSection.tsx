@@ -1,26 +1,27 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import gadgetImage from "@/assets/Electro E-commerce.png";
 import taskflow from "@/assets/Taskflow.png";
 import rps from "@/assets/RPS.png";
 import nextgen from "@/assets/nextgen.png";
 import InternTrack from "@/assets/InternTrack.png";
 import Translatepro from "@/assets/Translatepro.png";
+import n8nAiWorkflow from "@/assets/n8n_ai_news_workflow.png";
 
 const ProjectsSection = () => {
-  // 1)NPM RUN DEPLOY-> TO UPDATE IN GHPAGES ELSE 2)NPM RUN BUILD
   const projects = [
     {
       title: "TranslatePro",
       description:
-        "A high-fidelity document translation system developed by a team of four as an internship project for a client. Designed to convert complex technical PDFs into other languages while strictly preserving original layouts, diagrams, and formatting. Built with a React frontend and a Python FastAPI backend, it leverages Azure AI Translator for enterprise-grade accuracy. It features real-time processing, secure document handling, and a responsive interface powered by Vite and Framer Motion.",
+        "A high-fidelity document translation system developed by a team of four as an internship project. Designed to convert complex technical PDFs into other languages while strictly preserving layouts, diagrams, and formatting. Built with a React frontend and a Python FastAPI backend, it leverages Azure AI Translator for enterprise-grade accuracy. It features real-time processing, secure document handling, and a responsive interface powered by Vite and Framer Motion.",
       technologies: [
         "React",
         "Tailwind CSS",
         "Framer Motion",
         "Python",
         "FastAPI",
-        "Azure AI Translator",
+        "Azure AI",
         "SQLite",
       ],
       image: Translatepro,
@@ -29,12 +30,22 @@ const ProjectsSection = () => {
       featured: true,
     },
     {
+      title: "Autonomous AI News Agent",
+      description:
+        "An automated AI News Aggregator and Summarization Agent built on n8n. The system automatically fetches daily articles from multiple technical RSS feeds (such as Hugging Face,marktechpost and openai.com), cross-references them with Google Sheets to filter out duplicates, utilizes a Groq-powered Large Language Model to synthesize complex updates into simple summaries, and schedules daily delivery via Gmail and Telegram at 9 PM to track trends with zero manual effort.",
+      technologies: [
+        "n8n",
+        "Groq AI",
+        "Gmail API",
+      ],
+      image: n8nAiWorkflow,
+    },
+    {
       title: "Internship Application Tracker",
       description:
         "A comprehensive full-stack application designed to organize your job search. Built with a React frontend and a Motia-powered Node.js backend, it features real-time status tracking, automated email notifications via Nodemailer, and secure authentication with Clerk. The event-driven architecture ensures a seamless and responsive user experience.",
       technologies: [
         "React",
-        "Motia",
         "Node.js",
         "MongoDB",
         "Tailwind CSS",
@@ -52,13 +63,12 @@ const ProjectsSection = () => {
         "Developed a fully responsive e-commerce website for premium gadgets using React.js and Tailwind CSS. Implemented dynamic product listings, secure shopping cart, and promotional modules. Enhanced user experience with react-slick carousels and AOS scroll animations. Followed best practices for scalability, performance, and modern front-end architecture.",
       technologies: [
         "React",
-        "Tailwind css",
+        "Tailwind CSS",
         "JavaScript",
-        "CSS",
         "React-Router",
       ],
       image: gadgetImage,
-      liveUrl: " https://gokulsiva123.github.io/My-Electro-Ecommerce/",
+      liveUrl: "https://gokulsiva123.github.io/My-Electro-Ecommerce/",
       githubUrl: "https://github.com/GOKULSIVA123/My-Electro-Ecommerce",
       featured: true,
     },
@@ -67,13 +77,12 @@ const ProjectsSection = () => {
       description:
         "TaskFlow is a full-stack to-do list app with a Flask REST API backend and a React frontend. Its core feature is n8n integration, where a scheduler automatically runs every day at 11 PM to fetch and email a consolidated Excel report of all today's tasks. This setup showcases basic API, database, and automation skills.",
       technologies: [
-        "N8N",
+        "n8n",
         "Python",
         "Flask",
         "React",
         "Tailwind CSS",
-        "SQlite",
-        "Javascript",
+        "SQLite",
         "Docker",
       ],
       image: taskflow,
@@ -84,14 +93,14 @@ const ProjectsSection = () => {
     {
       title: "NextGen Safe Education Platform",
       description:
-        "Developed a disaster awareness education platform with React and Tailwind CSS, designed for engaging and interactive learning for kids. Integrated Framer Motion for smooth animations and Chart.js for visual progress tracking. Implemented Twilio for WhatsApp integration to provide timely safety alerts and communication. The platform features a clean, intuitive UI focused on safety education and easy navigation.",
+        "Developed a disaster awareness education platform with React and Tailwind CSS, designed for engaging and interactive learning for kids. Integrated Framer Motion for smooth animations and Chart.js for visual progress tracking. Implemented Twilio for WhatsApp integration to provide timely safety alerts and communication. The platform features a clean, intuitive UI focused on safety education.",
       technologies: [
         "React",
         "Python",
         "Flask",
         "Chart.js",
         "Twilio",
-        "Tailwindcss",
+        "Tailwind CSS",
       ],
       image: nextgen,
       githubUrl:
@@ -103,145 +112,115 @@ const ProjectsSection = () => {
       title: "RockPaperScissor Game",
       description:
         "Developed a Simple Rock Paper Scissors game using JavaScript, HTML, and Tailwind CSS. The project delivers an interactive and seamless gameplay. Responsive design ensures optimal experience across devices. Implements smooth instant result display for engaging play.",
-      technologies: ["Html", "Javascript", "Tailwindcss"],
+      technologies: ["HTML", "JavaScript", "Tailwind CSS"],
       image: rps,
       liveUrl: "https://rockpaperscissongs.netlify.app/",
-      githubUrl: "#",
+      githubUrl: "https://github.com/GOKULSIVA123",
       featured: false,
     },
   ];
 
   return (
-    <section id="projects" className="py-20 px-6">
+    <section id="projects" className="py-24 px-6 bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">Featured Projects</span>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-4 tracking-tight">
+            Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-500">Projects</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A showcase of my recent work, featuring innovative solutions and
-            cutting-edge technologies.
+          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
+            A selective showcase of my engineering work, highlighting full-stack architectures, API integrations, and workflow automation.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <Card
               key={project.title}
-              className="group transition-all duration-300 hover:-translate-y-2"
+              className="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.25)] dark:hover:shadow-[0_20px_40px_rgba(59,130,246,0.15)] hover:border-blue-200 dark:hover:border-blue-900/50 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden h-full flex flex-col"
             >
-              <Card className="card-gradient border-border/20 overflow-hidden h-full hover-glow transition-all duration-500">
-                <div className="relative overflow-hidden">
-                  <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-blue-500/20 flex items-center justify-center">
-                    <div key={index} className="text-6xl opacity-20">
-                      <img src={project.image} className=""></img>
-                    </div>
-                  </div>
-                  {project.featured && (
-                    <div className="absolute top-4 right-4">
-                      <span className="px-3 py-1 text-xs font-semibold hero-gradient text-white rounded-full">
-                        Featured
-                      </span>
-                    </div>
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              {/* Image Banner */}
+              <div className="relative h-48 bg-slate-50 dark:bg-slate-950 flex items-center justify-center overflow-hidden border-b border-slate-100 dark:border-slate-800/80">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+
+              {/* Card Body */}
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                  {project.description}
+                </p>
+
+                {/* Tech Badges */}
+                <div className="flex flex-wrap gap-1.5 mb-6">
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2.5 py-0.5 text-xs font-medium bg-slate-50 dark:bg-slate-950 text-slate-600 dark:text-slate-400 border border-slate-100 dark:border-slate-800 rounded-md cursor-default"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-foreground group-hover:gradient-text transition-all duration-300">
-                    {project.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2 py-1 text-xs bg-secondary/50 text-foreground rounded-md border border-border/20"
+                {/* Button Action row */}
+                {(project.liveUrl || project.githubUrl) && (
+                  <div className="flex items-center gap-3 mt-auto">
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1"
                       >
-                        {tech}
-                      </span>
-                    ))}
+                        <Button size="sm" className="bg-primary hover:bg-primary/95 text-white gap-1.5 rounded-xl font-medium w-full py-5">
+                          <ExternalLink className="w-4 h-4" />
+                          Live Demo
+                        </Button>
+                      </a>
+                    )}
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1"
+                      >
+                        <Button size="sm" variant="outline" className="border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white active:bg-slate-200 dark:active:bg-slate-900 text-slate-700 dark:text-slate-350 gap-1.5 rounded-xl font-medium w-full py-5 transition-all">
+                          <Github className="w-4 h-4" />
+                          GitHub
+                        </Button>
+                      </a>
+                    )}
                   </div>
-
-                  <div className="flex flex-row gap-3 justify-between items-center">
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1"
-                    >
-                      <Button
-                        size="sm"
-                        className="hero-gradient text-white hover:shadow-lg transition-all duration-300 flex-1"
-                      >
-                        <svg
-                          className="w-4 h-4 mr-2"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                          />
-                        </svg>
-                        Live Demo
-                      </Button>
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1"
-                    >
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="border-border/30 hover:bg-secondary/50 transition-all duration-300"
-                      >
-                        <svg
-                          className="w-4 h-4"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
-                        Github Repo
-                      </Button>
-                    </a>
-                  </div>
-                </div>
-              </Card>
-            </div>
+                )}
+              </div>
+            </Card>
           ))}
         </div>
 
+        {/* Call to action for more projects */}
         <div className="text-center mt-16">
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary transition-all duration-300"
+          <a
+            href="https://github.com/GOKULSIVA123"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex"
           >
-            View All Projects
-            <svg
-              className="w-4 h-4 ml-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900 rounded-xl gap-2 hover:-translate-y-0.5 transition-all"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </Button>
+              Explore More on GitHub
+              <ArrowRight className="w-4 h-4 text-primary" />
+            </Button>
+          </a>
         </div>
       </div>
     </section>
