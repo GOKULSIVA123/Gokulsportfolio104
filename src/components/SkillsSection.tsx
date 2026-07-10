@@ -74,7 +74,7 @@ const SkillsSection = () => {
         { name: "LangChain", icon: <LangChainIcon className="w-8 h-8" />, hoverColor: "group-hover:text-[#13C67C] group-hover:drop-shadow-[0_0_10px_rgba(19,198,124,0.3)]" },
         { name: "RAG AI", icon: <RagIcon className="w-8 h-8" />, hoverColor: "group-hover:text-[#8B5CF6] group-hover:drop-shadow-[0_0_10px_rgba(139,92,246,0.3)]" },
         { name: "FastAPI", icon: <SiFastapi className="w-8 h-8 text-[#009688]" />, hoverColor: "group-hover:text-[#009688] group-hover:drop-shadow-[0_0_10px_rgba(0,150,136,0.3)]" },
-        { name: "Flask", icon: <SiFlask className="w-8 h-8 text-slate-700 dark:text-slate-350" />, hoverColor: "group-hover:text-slate-900 dark:group-hover:text-white" },
+        { name: "Flask", icon: <SiFlask className="w-8 h-8 text-slate-700 dark:text-slate-300" />, hoverColor: "group-hover:text-slate-900 dark:group-hover:text-white" },
         { name: "Frappe Framework", icon: <Code className="w-8 h-8 text-primary" />, hoverColor: "group-hover:text-primary group-hover:drop-shadow-[0_0_10px_rgba(99,102,241,0.3)]" },
         { name: "SQLite", icon: <SiSqlite className="w-8 h-8 text-[#003B57]" />, hoverColor: "group-hover:text-[#003B57] group-hover:drop-shadow-[0_0_10px_rgba(0,59,87,0.3)]" },
         { name: "MongoDB", icon: <SiMongodb className="w-8 h-8 text-[#47A248]" />, hoverColor: "group-hover:text-[#47A248] group-hover:drop-shadow-[0_0_10px_rgba(71,162,72,0.3)]" },

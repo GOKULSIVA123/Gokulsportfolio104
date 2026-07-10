@@ -89,7 +89,7 @@ const HeroSection = () => {
             </span>
           </h1>
 
-          <p className="text-lg text-slate-600 dark:text-slate-350 mb-8 max-w-2xl leading-relaxed">
+          <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-2xl leading-relaxed">
             I am a Computer Science Engineering student in my Final year at{" "}
             <span className="font-semibold text-slate-900 dark:text-white">
               Sri Sairam Engineering College, Chennai
@@ -110,7 +110,7 @@ const HeroSection = () => {
               </Button>
             </a>
             <a href="#contact" className="flex">
-              <Button size="lg" variant="outline" className="border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 text-slate-700 dark:text-slate-300 rounded-xl w-full hover:-translate-y-0.5 transition-all">
+              <Button size="lg" variant="outline" className="border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white active:bg-slate-200 dark:active:bg-slate-900 text-slate-700 dark:text-slate-300 rounded-xl w-full hover:-translate-y-0.5 transition-all">
                 Contact Me
               </Button>
             </a>

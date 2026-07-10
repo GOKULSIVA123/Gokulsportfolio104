@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -74,11 +74,6 @@ const ContactSection = () => {
       icon: <Linkedin className="w-5 h-5" />,
     },
     {
-      name: "Twitter/X",
-      url: "#",
-      icon: <Twitter className="w-5 h-5" />,
-    },
-    {
       name: "Email",
       url: "mailto:gokulsiva1101@gmail.com",
       icon: <Mail className="w-5 h-5" />,
@@ -114,13 +109,13 @@ const ContactSection = () => {
                     <a
                       key={info.title}
                       href={info.href}
-                      className="flex items-center gap-4 p-4 rounded-xl border border-slate-150 dark:border-slate-800 bg-white dark:bg-slate-950 hover:border-blue-200 dark:hover:border-blue-900/50 hover:shadow-[0_10px_20px_-10px_rgba(59,130,246,0.15)] transition-all duration-200 group"
+                      className="flex items-center gap-4 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 hover:border-blue-200 dark:hover:border-blue-900/50 hover:shadow-[0_10px_20px_-10px_rgba(59,130,246,0.15)] transition-all duration-200 group"
                     >
                       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-105 transition-transform">
                         {info.icon}
                       </div>
                       <div>
-                        <h4 className="text-xs font-semibold text-slate-450 dark:text-slate-400 uppercase tracking-wider">
+                        <h4 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
                           {info.title}
                         </h4>
                         <p className="text-sm font-bold text-slate-800 dark:text-slate-200">
@@ -134,7 +129,7 @@ const ContactSection = () => {
 
               {/* Social Connections */}
               <div className="mt-8 pt-8 border-t border-slate-200/60 dark:border-slate-800/80">
-                <h4 className="text-xs font-bold text-slate-450 dark:text-slate-400 uppercase tracking-wider mb-4">
+                <h4 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-4">
                   Follow Me
                 </h4>
                 <div className="flex gap-3">
@@ -144,7 +139,7 @@ const ContactSection = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-xl bg-white dark:bg-slate-905 border border-slate-250 dark:border-slate-800 flex items-center justify-center text-slate-650 dark:text-slate-300 hover:text-white dark:hover:text-white hover:bg-primary dark:hover:bg-primary hover:border-primary dark:hover:border-primary hover:scale-105 transition-all duration-200"
+                      className="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-white dark:hover:text-white hover:bg-primary dark:hover:bg-primary hover:border-primary dark:hover:border-primary hover:scale-105 transition-all duration-200"
                       aria-label={social.name}
                     >
                       {social.icon}
@@ -174,7 +169,7 @@ const ContactSection = () => {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-850 focus:border-primary dark:focus:border-primary focus:bg-white dark:focus:bg-slate-900 rounded-xl px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                      className="bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 focus:border-primary dark:focus:border-primary focus:bg-white dark:focus:bg-slate-900 rounded-xl px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500"
                       placeholder="Your name"
                     />
                   </div>
@@ -192,7 +187,7 @@ const ContactSection = () => {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-850 focus:border-primary dark:focus:border-primary focus:bg-white dark:focus:bg-slate-900 rounded-xl px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                      className="bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 focus:border-primary dark:focus:border-primary focus:bg-white dark:focus:bg-slate-900 rounded-xl px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500"
                       placeholder="name@example.com"
                     />
                   </div>
@@ -212,7 +207,7 @@ const ContactSection = () => {
                     required
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-850 focus:border-primary dark:focus:border-primary focus:bg-white dark:focus:bg-slate-900 rounded-xl px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                    className="bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 focus:border-primary dark:focus:border-primary focus:bg-white dark:focus:bg-slate-900 rounded-xl px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500"
                     placeholder="Project inquiry / Say hello"
                   />
                 </div>
@@ -231,7 +226,7 @@ const ContactSection = () => {
                     rows={5}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-850 focus:border-primary dark:focus:border-primary focus:bg-white dark:focus:bg-slate-900 rounded-xl px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 resize-none"
+                    className="bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 focus:border-primary dark:focus:border-primary focus:bg-white dark:focus:bg-slate-900 rounded-xl px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 resize-none"
                     placeholder="Tell me more about your inquiry..."
                   />
                 </div>

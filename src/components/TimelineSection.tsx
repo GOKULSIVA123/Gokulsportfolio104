@@ -8,25 +8,35 @@ const renderDescriptionText = (text: string) => {
     const normalPart = text.substring(colonIndex);
     return (
       <>
-        <span className="font-bold text-slate-900 dark:text-white">{boldPart}</span>
-        <span>{normalPart}</span>
+        <span className="font-bold text-primary dark:text-indigo-300">{boldPart}</span>
+        <span className="text-slate-600 dark:text-slate-300">{normalPart}</span>
       </>
     );
   }
-  return <span>{text}</span>;
+  return <span className="text-slate-600 dark:text-slate-300">{text}</span>;
 };
 
 const TimelineSection = () => {
   const milestones = [
     {
+      type: "education",
+      title: "B.E. Computer Science & Engineering",
+      organization: "Sri Sairam Engineering College, Chennai",
+      duration: "2023 - 2027",
+      description:
+        "Currently in Final year of Computer Science Engineering. Actively learning and specializing in web engineering, AI, data structures and algorithms, system design, and building projects.",
+      icon: <GraduationCap className="w-5 h-5 text-primary" />,
+    },
+    {
       type: "work",
-      title: "Full-Stack Developer Intern",
-      organization: "Client Project (TranslatePro)",
-      duration: "Jan 2026 - Feb 2026",
+      title: "Full Stack Intern",
+      organization: "Kodivian Technologies",
+      duration: "Jun 2025 - Jul 2025",
       description: [
-        "Developed TranslatePro for a global client: Utilized FastAPI and Azure AI Translator (F0 Tier) to provide seamless document translation across 6 languages.",
-        "Engineered Text Extraction Pipeline: Designed a Python-based text extraction pipeline that optimized character usage within free-tier limits (2M/month).",
-        "Conceived Gamified Product Features: Documented a strategic product proposal for Duolingo to introduce an \"Immersive Context\" feature, leveraging real-world translation tasks to boost advanced learner engagement."
+        "ERP Solution Development: Developed an Asset Management and Employee Reimbursement system utilizing Frappe’s customizable DocTypes, replacing manual workflows.",
+        "Frappe Ecosystem Integration: Worked extensively across the ecosystem, including Frappe HRMS, Helpdesk, Builder, and Frappe Cloud.",
+        "Dockerized Local Environment: Eliminated strict Linux OS dependencies by containerizing the setup, reducing developer onboarding time to under 30 minutes.",
+        "Technical Documentation: Documented detailed guides on system configurations and best practices, reducing team research time by 50%."
       ],
       icon: <Briefcase className="w-5 h-5 text-primary" />,
     },
@@ -43,25 +53,15 @@ const TimelineSection = () => {
     },
     {
       type: "work",
-      title: "Full Stack Intern",
-      organization: "Kodivian Technologies",
-      duration: "Jun 2025 - Jul 2025",
+      title: "Full-Stack Developer Intern",
+      organization: "Client Project (TranslatePro)",
+      duration: "Jan 2026 - Feb 2026",
       description: [
-        "ERP Solution Development: Developed an Asset Management and Employee Reimbursement system utilizing Frappe’s customizable DocTypes, replacing manual workflows.",
-        "Frappe Ecosystem Integration: Worked extensively across the ecosystem, including Frappe HRMS, Helpdesk, Builder, and Frappe Cloud.",
-        "Dockerized Local Environment: Eliminated strict Linux OS dependencies by containerizing the setup, reducing developer onboarding time to under 30 minutes.",
-        "Technical Documentation: Documented detailed guides on system configurations and best practices, reducing team research time by 50%."
+        "Developed TranslatePro for a global client: Utilized FastAPI and Azure AI Translator (F0 Tier) to provide seamless document translation across 6 languages.",
+        "Engineered Text Extraction Pipeline: Designed a Python-based text extraction pipeline that optimized character usage within free-tier limits (2M/month).",
+        "Conceived Gamified Product Features: Documented a strategic product proposal for Duolingo to introduce an \"Immersive Context\" feature, leveraging real-world translation tasks to boost advanced learner engagement."
       ],
       icon: <Briefcase className="w-5 h-5 text-primary" />,
-    },
-    {
-      type: "education",
-      title: "B.E. Computer Science & Engineering",
-      organization: "Sri Sairam Engineering College, Chennai",
-      duration: "2023 - 2027",
-      description:
-        "Currently in Final year of Computer Science Engineering. Actively learning and specializing in web engineering, AI, data structures and algorithms, system design, and building projects.",
-      icon: <GraduationCap className="w-5 h-5 text-primary" />,
     },
   ];
 
@@ -86,7 +86,7 @@ const TimelineSection = () => {
               </div>
 
               {/* Card Container */}
-              <Card className="p-6 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.25)] dark:hover:shadow-[0_20px_40px_rgba(59,130,246,0.15)] hover:border-blue-200 dark:hover:border-blue-900/50 hover:-translate-y-1.5 transition-all duration-300">
+              <Card className="p-6 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-[0_15px_30px_-15px_rgba(59,130,246,0.1)] dark:hover:shadow-[0_15px_30px_rgba(59,130,246,0.05)] hover:border-blue-200/60 dark:hover:border-blue-900/30 transition-all duration-300">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
                   {/* Left: Icon & Title info */}
                   <div className="flex items-center gap-3">
@@ -111,7 +111,7 @@ const TimelineSection = () => {
                 </div>
 
                 {Array.isArray(item.description) ? (
-                  <ul className="list-disc pl-5 space-y-1.5 text-sm text-slate-600 dark:text-slate-350 leading-relaxed">
+                  <ul className="list-disc pl-5 space-y-1.5 text-sm text-indigo-500 dark:text-indigo-400/80 leading-relaxed">
                     {item.description.map((point, idx) => (
                       <li key={idx}>
                         {renderDescriptionText(point)}
@@ -119,7 +119,7 @@ const TimelineSection = () => {
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-sm text-slate-600 dark:text-slate-350 leading-relaxed pl-1">
+                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed pl-1">
                     {renderDescriptionText(item.description)}
                   </p>
                 )}
